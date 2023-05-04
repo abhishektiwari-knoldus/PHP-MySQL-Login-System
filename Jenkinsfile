@@ -37,7 +37,7 @@ pipeline {
 
               sh 'kubectl apply -f phppod.yml'  
               sh 'kubectl set image deployment/mydeploy mycontainer=abhishek00007/lampp${BUILD_NUMBER}'
-              sh 'kubectl rollout undu deployment/undeploy'
+              //sh 'kubectl rollout undu deployment/mydeploy'
               
 }
                
