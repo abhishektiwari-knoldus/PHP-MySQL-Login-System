@@ -33,7 +33,7 @@ pipeline {
         {
             steps
             {
-              withCredentials([file(credentialsId: '0fe6a189-a124-43d0-8fcf-d3f27ac0fa63', variable: 'a1')]) {
+              withKubeConfig([credentialsId: '0fe6a189-a124-43d0-8fcf-d3f27ac0fa63']) {
               sh 'kubectl apply -f phppod.yml'
 }
                
