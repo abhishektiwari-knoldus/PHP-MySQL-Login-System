@@ -34,7 +34,7 @@ pipeline {
             steps
             {
               withKubeConfig([credentialsId: '0fe6a189-a124-43d0-8fcf-d3f27ac0fa63']) {
-              sh 'kubectl --kubeconfig=set image deployment/mydeploy mycontainer=abhishek00007/lampp${BUILD_NUMBER}'
+              sh 'kubectl --kubeconfig=set image phppod/mydeploy mycontainer=abhishek00007/lampp${BUILD_NUMBER}'
 }
                
             }
