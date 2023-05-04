@@ -14,8 +14,8 @@ pipeline {
                 script{
                     withCredentials([string(credentialsId: 'dochub-pwd', variable: 'dockerhubpwd')]) {
                     sh 'docker login -u abhishek00007 -p ${dockerhubpwd}'
-                    
-                    sh 'docker push lamp/php1'
+                    sh 'docker tag lamp/php abhishek00007/lampp:php1'
+                    sh 'docker push abhishek00007/lampp:php1'
   
 }
 
